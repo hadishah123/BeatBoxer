@@ -5,23 +5,34 @@ body {
     align-items: center;
     height: 100vh;
     justify-content: center;
-    background-color: pink;
-  }
-  
-  h1 {
+    overflow: hidden;
+}
+
+#myVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+h1 {
     font-size: 50px;
-    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-family: Impact, "Arial Narrow Bold", sans-serif;
     letter-spacing: 4px;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     white-space: nowrap;
-  }
-  
-  .container {
+    margin-bottom: 3rem;
+}
+
+.container {
     text-align: center;
-  }
-  
-  .btn {
+}
+
+.btn {
     padding: 30px 50px;
     background-color: white;
     border: none;
@@ -37,12 +48,33 @@ body {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     cursor: pointer;
     text-transform: capitalize;
-  }
-  
-  .btn:hover {
-    color: pink;
-  }
-  
-  .btn:active {
+}
+
+.btn:hover {
+    color: rgb(246, 189, 31);
+}
+
+.btn:active {
     background-size: 105%;
-  }
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+    body{
+        background: linear-gradient(to right,#b4150c,#a711be);
+    }
+    #myVideo {
+        display: none; 
+    }
+
+    h1 {
+        font-size: 30px; 
+        margin-bottom: 2rem;
+    }
+
+    .btn {
+        padding: 20px 40px; 
+        font-size: 24px; 
+        min-width: 150px;
+    }
+}
